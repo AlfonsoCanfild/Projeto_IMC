@@ -167,10 +167,11 @@ btnSalvarRegistro.onclick = () => {
 
 
 // ===== BOTÃO HAMBURGUER PARA MOBILE =====
-const btnHamburger = document.getElementById("btnHamburger");
+const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
 
-btnHamburger.onclick = () => {
-    btnHamburger.classList.toggle("active");
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
     mobileMenu.classList.toggle("active");
-};
+});
+

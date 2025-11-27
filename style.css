@@ -434,9 +434,9 @@ th, td {
 }
 
 
-/* ===============================================
-   MENU HAMBÚRGUER — versão oficial do seu site
-================================================ */
+/* =====================================================
+      MENU HAMBÚRGUER CORRIGIDO (SEM DUPLICAÇÃO)
+===================================================== */
 
 /* Botão hamburguer */
 .hamburger {
@@ -447,7 +447,7 @@ th, td {
   justify-content: space-between;
   cursor: pointer;
   z-index: 2001;
-  margin-left: 400px; /* empurra para direita */
+  margin-left: auto;
 }
 
 .hamburger span {
@@ -458,7 +458,7 @@ th, td {
   transition: 0.3s;
 }
 
-/* transformar em X */
+/* animação para X */
 .hamburger.active span:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
 }
@@ -469,70 +469,73 @@ th, td {
   transform: translateY(-9px) rotate(-45deg);
 }
 
-/* MENU LATERAL MOBILE */
-.nav {
-  transition: right 0.35s ease;
+/* MENU MOBILE (separado do desktop!) */
+#mobileMenu {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(5px);
+  box-shadow: -4px 0 25px rgba(0,0,0,0.10);
+  padding-top: 100px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.35s ease;
+  z-index: 2000;
 }
 
+#mobileMenu a {
+  margin: 18px 0;
+  font-size: 20px;
+}
+
+/* quando abrir */
+#mobileMenu.active {
+  right: 0;
+}
+
+/* ===============================================
+      RESPONSIVIDADE DO MENU (AQUI ESTÁ A CHAVE)
+================================================ */
+
+/* ---------- DESKTOP (>820px) ---------- */
+@media (min-width: 821px) {
+
+  /* mostra menu desktop */
+  .nav {
+    display: flex !important;
+    transform: translateX(-20%);
+  }
+
+  /* esconde menu mobile */
+  #mobileMenu {
+    display: none !important;
+  }
+
+  /* esconde o botão hambúrguer */
+  .hamburger {
+    display: none !important;
+  }
+}
+
+/* ---------- MOBILE (<820px) ---------- */
 @media (max-width: 820px) {
 
-  /* Botão aparece */
+  /* esconde menu desktop */
+  .nav {
+    display: none !important;
+  }
+
+  /* mostra botão hambúrguer */
   .hamburger {
-    display: flex;
-  }
-
-  /* Menu vira lateral */
-  #mobileMenu {
-    position: fixed;
-    top: 0;
-    right: -260px;
-    width: 260px;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(5px);
-    box-shadow: -4px 0 25px rgba(0,0,0,0.10);
-    padding-top: 100px;
-    padding-left: 30px;
-    display: flex;
-    flex-direction: column;
-    z-index: 2000;
-  }
-
-  #mobileMenu a {
-    margin: 18px 0;
-    font-size: 20px;
-  }
-
-  /* Quando ativo */
-  #mobileMenu.active {
-    right: 0;
-  }
-
-  /* Some o menu desktop */
-  .header .nav {
-    display: none;
-  }
-
-  /* Apenas o mobile menu é exibido */
-  #mobileMenu {
     display: flex !important;
   }
-}
 
-/* Manter menu desktop normal */
-@media (min-width: 821px) {
+  /* mostra menu mobile (escondido lateralmente até clicar) */
   #mobileMenu {
-    position: static;
-    height: auto;
-    width: auto;
-    background: none;
-    box-shadow: none;
-    padding: 0;
-    flex-direction: row;
-  }
-
-  #mobileMenu a {
-    margin: 0 24px;
-    font-size: 18px;
+    display: flex !important;
   }
 }
