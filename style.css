@@ -303,8 +303,51 @@ th, td {
   opacity: 0.9;
 }
 
+@media (max-width: 1024px) {
+  .hero {
+    background-size: cover;
+    justify-content: left;
+    padding-left: 15px;
+  }
+
+  .hero-content {
+    transform: translateY(-80px);
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+    text-align: left;
+    padding-left: 10%;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+    text-align: left;
+    padding-left: 10%;
+    height: auto;
+  }
+
+  .card {
+    max-width: 87%;  
+  }
+
+  .card-contato {
+    max-width: 280px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
+    background-size: cover;
     width: 100%;
     justify-content: left;
     text-align: center;
@@ -312,12 +355,12 @@ th, td {
 
   .hero-content h1 {
     font-size: 20px;
-    padding-left: 10px;
+    padding-left: 10%;
   }
 
   .hero-content p {
     font-size: 12px;
-    padding-left: 10px;
+    padding-left: 10%;
     height: auto;
   }
 
@@ -331,13 +374,16 @@ th, td {
   }
 
   .card {
-    max-width: 520px;
-    text-align: center;
+    max-width: 85%;
   }
 
   .card-contato {
     max-width: 280px;
   }
 
-}
+  .btn-hero {
+    padding: 10px 18px;
+    font-size: 17px;
+  }
 
+}
