@@ -236,7 +236,7 @@ th, td {
 
 
 /* ============================
-   BANNER FULLSCREEN REAL
+   BANNER FULLSCREEN
 ============================ */
 .hero {
   width: 100%;
@@ -303,239 +303,41 @@ th, td {
   opacity: 0.9;
 }
 
-
-/* ============================================
-   RESPONSIVIDADE (SEM HAMBÚRGUER)
-============================================ */
-
-@media (max-width: 1200px) {
-  .nav {
-    transform: translateX(-10%);
-  }
-}
-
-@media (max-width: 1050px) {
-  .nav {
-    transform: translateX(0);
-  }
-  .nav a {
-    margin-left: 20px;
-  }
-}
-
-@media (max-width: 900px) {
-  .nav {
-    margin-left: auto;
-  }
-  .nav a {
-    margin-left: 14px;
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 780px) {
-  .nav {
-    margin-left: auto;
-    transform: translateX(0);
-  }
-  .nav a {
-    margin-left: 10px;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 768px) {
-  .logo img {
-    height: 60px;
-  }
-
-  .nav a {
-    margin-left: 16px;
-    font-size: 15px;
-  }
-
-  .header {
-    height: 70px;
-    padding: 0 20px;
-  }
-}
-
-@media (max-width: 520px) {
-  .nav a {
-    margin-left: 10px;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 420px) {
-  .logo img {
-    height: 48px;
-  }
-
-  .nav a {
-    font-size: 13px;
-    margin-left: 6px;
-  }
-}
-
-
-/* HERO */
 @media (max-width: 768px) {
   .hero {
-    background-size: cover;
-    background-position: center top;
-    padding-left: 20px;
-    height: calc(100vh - 70px);
+    width: 100%;
+    justify-content: left;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 20px;
+    padding-left: 10px;
+  }
+
+  .hero-content p {
+    font-size: 12px;
+    padding-left: 10px;
+    height: auto;
   }
 
   .hero-content {
-    transform: translateY(-40px);
-    max-width: 90%;
+    transform: translateY(0);
   }
 
-  .hero-text h1 {
-    font-size: 40px;
+  .nav {
+    transform: translateX(-10%);
+    text-align: center;
   }
 
-  .hero-text p {
-    font-size: 18px;
+  .card {
+    max-width: 520px;
+    text-align: center;
   }
-}
 
-@media (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 32px;
-  }
-  .hero-text p {
-    font-size: 16px;
-  }
-}
-
-/* CONTATO */
-@media (max-width: 768px) {
   .card-contato {
-    max-width: 90%;
-    padding: 18px 20px;
-  }
-}
-
-/* TABELAS E INPUTS */
-@media (max-width: 400px) {
-  table td,
-  table th {
-    font-size: 14px;
-    padding: 6px;
+    max-width: 280px;
   }
 
-  input[type="number"],
-  input[type="date"] {
-    width: 100%;
-  }
 }
 
-
-/* =====================================================
-      MENU HAMBÚRGUER CORRIGIDO (SEM DUPLICAÇÃO)
-===================================================== */
-
-/* Botão hamburguer */
-.hamburger {
-  width: 32px;
-  height: 22px;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  z-index: 2001;
-  margin-left: auto;
-}
-
-.hamburger span {
-  width: 100%;
-  height: 4px;
-  background: #2b7a78;
-  border-radius: 4px;
-  transition: 0.3s;
-}
-
-/* animação para X */
-.hamburger.active span:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
-}
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.active span:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
-}
-
-/* MENU MOBILE (separado do desktop!) */
-#mobileMenu {
-  position: fixed;
-  top: 0;
-  right: -260px;
-  width: 260px;
-  height: 100vh;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(5px);
-  box-shadow: -4px 0 25px rgba(0,0,0,0.10);
-  padding-top: 100px;
-  padding-left: 30px;
-  display: flex;
-  flex-direction: column;
-  transition: 0.35s ease;
-  z-index: 2000;
-}
-
-#mobileMenu a {
-  margin: 18px 0;
-  font-size: 20px;
-}
-
-/* quando abrir */
-#mobileMenu.active {
-  right: 0;
-}
-
-/* ===============================================
-      RESPONSIVIDADE DO MENU (AQUI ESTÁ A CHAVE)
-================================================ */
-
-/* ---------- DESKTOP (>820px) ---------- */
-@media (min-width: 821px) {
-
-  /* mostra menu desktop */
-  .nav {
-    display: flex !important;
-    transform: translateX(-20%);
-  }
-
-  /* esconde menu mobile */
-  #mobileMenu {
-    display: none !important;
-  }
-
-  /* esconde o botão hambúrguer */
-  .hamburger {
-    display: none !important;
-  }
-}
-
-/* ---------- MOBILE (<820px) ---------- */
-@media (max-width: 820px) {
-
-  /* esconde menu desktop */
-  .nav {
-    display: none !important;
-  }
-
-  /* mostra botão hambúrguer */
-  .hamburger {
-    display: flex !important;
-  }
-
-  /* mostra menu mobile (escondido lateralmente até clicar) */
-  #mobileMenu {
-    display: flex !important;
-  }
-}
