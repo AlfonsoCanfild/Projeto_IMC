@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora IMC - Mobile</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- script principal -->
+  <script src="script-mobile.js" defer></script>
+
+  <style>
+    /* Ajustes EXCLUSIVOS para versão mobile 
+    Achei melhor deixar aqui mesmo para controle e garantia que tudo iria funcionar*/
+    .mobile-container {
+      max-width: 380px;
+      margin: 120px auto 40px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .mobile-container h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 26px;
+      color: #000000;
+    }
+
+    .mobile-row {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .mobile-row label {
+      font-size: 14px;
+      color: #444;
+    }
+
+    .mobile-row input {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .btn-mobile {
+      width: 65%;
+      padding: 14px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      background: #2b7a78;
+      color: white;
+      cursor: pointer;
+      margin-bottom: 20px;
+      margin-left: 18%;
+    }
+
+    .btn-mobile:hover { opacity: .9; }
+
+    .resultado-mobile {
+      text-align: center;
+      padding: 20px;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 20px;
+      margin-top: 10px;
+      font-weight: bold;
+      display: none;
+    }
+
+    .descricao-mobile {
+      margin-top: 12px;
+      text-align: center;
+      font-size: 16px;
+      color: #333;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU SUPERIOR (MESMO DO DESKTOP) -->
+  <header class="header">
+    <div class="logo">
+      <img src="assets/logo.png" alt="MeuIMC">
+    </div>
+
+    <nav class="nav">
+      <a class="hover-underline" href="index.html">Home</a>
+      <a class="hover-underline" href="calculadora.html">Calculadora de IMC</a>
+      <a class="hover-underline" href="dicas.html">Dicas de Saúde</a>
+      <a class="hover-underline" href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+
+  <!-- CONTEÚDO -->
+  <div class="mobile-container">
+    <h1>Calculadora IMC</h1>
+
+    <div class="mobile-row">
+      <div>
+        <label>Peso (kg)</label>
+        <input type="number" id="pesoMobile" placeholder="Ex: 70">
+      </div>
+
+      <div>
+        <label>Altura (m)</label>
+        <input type="number" step="0.01" id="alturaMobile" placeholder="Ex: 1.75">
+      </div>
+    </div>
+
+    <button class="btn-mobile" id="calcularMobile">Calcular</button>
+
+    <div id="resultadoMobile" class="resultado-mobile"></div>
+    <div id="descricaoMobile" class="descricao-mobile"></div>
+
+  </div>
+
+</body>
+</html>
