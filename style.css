@@ -341,7 +341,7 @@ th, td {
   }
 
   .card-contato {
-    max-width: 280px;
+    max-width: 60%;
   }
 }
 
@@ -353,19 +353,9 @@ th, td {
     text-align: center;
   }
 
-  .hero-content h1 {
-    font-size: 20px;
-    padding-left: 10%;
-  }
-
-  .hero-content p {
-    font-size: 12px;
-    padding-left: 10%;
-    height: auto;
-  }
-
   .hero-content {
     transform: translateY(0);
+    max-width: 72%;
   }
 
   .nav {
@@ -378,7 +368,7 @@ th, td {
   }
 
   .card-contato {
-    max-width: 280px;
+    max-width: 60%;
   }
 
   .btn-hero {
