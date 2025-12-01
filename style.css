@@ -415,8 +415,13 @@ th, td {
     font-weight: 600;
   }
 
-
-
+  /* estilo dos separadores '|' */
+  .mobile-bottom-nav a.separator {
+    pointer-events: none; /* impede clique */
+    font-weight: 300;
+    margin: 0 4px; /* espaço certinho */
+    opacity: 0.6;  /* mais discreto */
+  }
 
   .container {
     padding: 78px 0px !important;
