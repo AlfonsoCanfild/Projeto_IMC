@@ -348,6 +348,7 @@ th, td {
   .hero {
     background-size: cover;
     width: auto;
+    max-height: auto;
     justify-content: left;
     text-align: center;
   }
@@ -441,3 +442,5 @@ th, td {
     overflow: hidden !important;
   }
 }
+
+
