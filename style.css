@@ -363,12 +363,11 @@ th, td {
   }
 
   .card {
-    max-width: 75%;
+    max-width: auto;
   }
 
   .card-contato {
-    max-width: 60%;
-    justify-content: center;
+    max-width: auto;
   }
 
   .btn-hero {
@@ -413,12 +412,6 @@ th, td {
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
-  }
-
-  /* empurra o conteúdo para baixo */
-  body.home,
-  body.mobile-calc {
-    padding-top: 0px;
   }
 }
 
