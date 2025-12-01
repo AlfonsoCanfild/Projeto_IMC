@@ -413,6 +413,16 @@ th, td {
     font-size: 18px;
     font-weight: 600;
   }
+
+  .container {
+    padding: 78px 0px !important;
+    max-width: 100% !important;
+  }
+
+  .card, .card-contato {
+    width: 100% !important;
+    margin: 0 auto 18px;
+  }
 }
 
 /* FORÇA o menu mobile a sumir COMPLETAMENTE no desktop, para garantir kkkkk....*/
