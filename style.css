@@ -425,6 +425,10 @@ th, td {
     margin: 0 auto 18px;
   }
 
+  .card-contato {
+    font-size: 13px;
+  }
+
   /* Mantém tudo estável SEM deslocamento lateral */
   body.home {
     overflow-x: hidden !important;
