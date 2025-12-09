@@ -33,7 +33,7 @@ body:not(.home)::before {
   width: 100%;
   max-width: 920px;
   margin: 0 auto;
-  padding: 120px 32px 32px; /* espaço para o menu fixo */
+  padding: 120px 32px 32px;
 }
 
 /* ====== CARDS DAS PÁGINAS INTERNAS ====== */
@@ -396,7 +396,7 @@ th, td {
   /* MENU MOBILE AGORA NO TOPO */
   .mobile-bottom-nav {
     position: fixed;
-    top: 0px; /* abaixo da logo mobile */
+    top: 0px;
     left: 0;
     width: 100%;
     height: 77px;
@@ -418,10 +418,10 @@ th, td {
 
   /* estilo dos separadores '|' */
   .mobile-bottom-nav a.separator {
-    pointer-events: none; /* impede clique */
+    pointer-events: none;
     font-weight: 300;
-    margin: 0 4px; /* espaço certinho */
-    opacity: 0.6;  /* mais discreto */
+    margin: 0 4px;
+    opacity: 0.6;
   }
 
   .container {
@@ -461,8 +461,8 @@ th, td {
 
 .fixed-download-btn {
   position: fixed;
-  bottom: 20px;       /* distância do fundo da tela */
-  right: 20px;         /* distância da esquerda */
+  bottom: 20px;
+  right: 20px;
   background-color: var(--accent);
   color: #fff;
   text-align: center;
